@@ -9,12 +9,18 @@
     <Window.Background>
         <ImageBrush ImageSource="Resources/bitcoin-Logo-Wallpaper-1600x1011.png" Stretch="UniformToFill" TileMode="None" Opacity="0.8"/>
     </Window.Background>
-    <Grid Margin="0,0,0.4,-0.2" Height="494">
+    <Grid Margin="0,0,-6.6,-19.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="332*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="433*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="60*"/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <Label Content="Main Menu" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="73,90,63,0" Background="#00000000" Height="57" Width="206" FontWeight="Bold" Foreground="#FF6E0404"/>
+        <Label Content="Main Menu" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="73,90,53,0" Background="#00000000" Height="57" Width="206" FontWeight="Bold" Foreground="#FF6E0404"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="118,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Введите торговую пару" x:Name="Couple" TextChanged="Couple_TextChanged" Text="Торговая пара">
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.6"/>
@@ -30,24 +36,24 @@
                 <SolidColorBrush Color="White" Opacity="0.6"/>
             </TextBox.Background>
         </TextBox>
-        <Label Content="CryptoBot" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="143,0,136,0" Height="26" Width="63"/>
-        <Label Content="NutiNaguti, 2019" HorizontalAlignment="Center" Width="105" Margin="118,449,119,0" Height="26" VerticalAlignment="Top"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="257,388,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19">
+        <Label Content="CryptoBot" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="143,0,126,0" Height="26" Width="63"/>
+        <Label Content="NutiNaguti, 2019" HorizontalAlignment="Center" Width="105" Margin="118,1,109,0" Height="26" VerticalAlignment="Top" Grid.Row="2"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="247,388,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19">
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
             </Button.Background>
         </Button>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="257,416,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="19">
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="247,416,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="19" Grid.RowSpan="2">
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
             </Button.Background>
         </Button>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,416,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3" Height="19">
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,416,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3" Height="19" Grid.RowSpan="2">
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
             </Button.Background>
         </Button>
-        <Button Content="Help" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" RenderTransformOrigin="-3.181,-12.875" Height="19">
+        <Button Content="Help" HorizontalAlignment="Left" Margin="20,21,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" RenderTransformOrigin="-3.181,-12.875" Height="19">
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
             </Button.Background>
