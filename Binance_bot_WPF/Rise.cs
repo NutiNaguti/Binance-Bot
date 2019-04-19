@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Binance_bot_WPF
 {
+    /*
+     *  Класс режима торговли на росте
+     */
     class Rise
     {
             

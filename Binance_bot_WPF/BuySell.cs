@@ -1,10 +1,14 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 
 namespace Binance_bot_WPF
 {
+   /*
+    *  Класс цикла покупки-продажи
+    */
     class BuySell
     {
-        public static void Cycle(int x) // цикл покупки и продажи
+        public static void Cycle(int x) // цикл покупки и продажи с задержкой
         {
             while (App.work)
             {
@@ -19,6 +23,7 @@ namespace Binance_bot_WPF
         {
             while (App.work)
             {
+
                 App.Buy();
                 App.Sell();
             }

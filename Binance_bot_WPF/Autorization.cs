@@ -8,6 +8,9 @@ using System.IO;
 
 namespace Binance_bot_WPF
 {
+   /*
+    *  Класс авторизации на бирже
+    */
     class Autorization
     {
         public static void AutorizationBinance()

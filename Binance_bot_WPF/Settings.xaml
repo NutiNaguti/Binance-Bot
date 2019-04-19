@@ -7,19 +7,14 @@
         mc:Ignorable="d"
         Title="Settings" Height="388.8" Width="259.2">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\User\source\repos\Binance_bot_WPF\Binance_bot_WPF\Resources\stgns.jpg" Stretch="UniformToFill" TileMode="None" Opacity="0.8"/>
+        <ImageBrush ImageSource="/Binance_bot_WPF;component/Images/stgns.jpg" Stretch="UniformToFill" TileMode="None" Opacity="0.8"/>
     </Window.Background>
     <Grid Margin="0,0,323.6,239">
         <Grid.RowDefinitions>
             <RowDefinition Height="97*"/>
             <RowDefinition Height="23*"/>
         </Grid.RowDefinitions>
-        <Button Content="Accept" HorizontalAlignment="Left" Height="22" Margin="88,198.2,-173,-197" VerticalAlignment="Top" Width="85" Click="Button_Click" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="73,3.2,-193,-3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Введите API Key" x:Name="API_Key" TextChanged="API_Key_TextChanged" Text="API Key" Grid.Row="1">
-            <TextBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.6"/>
-            </TextBox.Background>
-        </TextBox>
+        <Button Content="Accept" HorizontalAlignment="Left" Height="22" Margin="88,198.2,-173,-197" VerticalAlignment="Top" Width="85" Click="Button_Click_Accept" Grid.Row="1"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="73,43.2,-193,-43" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Введите Secret API Key" x:Name="Secret_API_Key" TextChanged="Secret_API_Key_TextChanged" Text="Secret API Key" Grid.Row="1">
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.6"/>
@@ -32,6 +27,11 @@
         </TextBox>
         <Label Content="Settings" HorizontalAlignment="Left" Margin="88,43,-173,0" VerticalAlignment="Top" Width="85" Foreground="White" FontSize="20" Height="36"/>
         <Button Content="Default" HorizontalAlignment="Left" Height="22" Margin="88,171.2,-173,-170" VerticalAlignment="Top" Width="85" Click="Button_Click_Default" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="73,3.2,-193,-3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Введите API Key" x:Name="API_Key" TextChanged="API_Key_TextChanged" Text="API Key" Grid.Row="1">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </TextBox.Background>
+        </TextBox>
 
     </Grid>
 </Window>

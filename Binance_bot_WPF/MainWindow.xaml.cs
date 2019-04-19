@@ -8,14 +8,21 @@ using System.Windows.Media.Imaging;
 
 namespace Binance_bot_WPF
 {
+   /*
+    *  Класс основного окна wpf
+    */
     public partial class MainWindow : Window
     {
-        public MainWindow() => InitializeComponent();
+        public static string j = "";
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // Stop
         {
             App.work = false;
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\котя.jpg");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images\котя.jpg");
             ImageBrush myBrush = new ImageBrush();
             myBrush.ImageSource = new BitmapImage(new Uri(path, UriKind.Absolute));
             Background = myBrush;
@@ -24,7 +31,7 @@ namespace Binance_bot_WPF
 
         private void Button_Click_2(object sender, RoutedEventArgs e) // Help
         {
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\Read me.txt");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Files\Read me.txt");
             Process.Start(path);
         }
 
@@ -50,15 +57,15 @@ namespace Binance_bot_WPF
             App.coinsString = Coins.Text;
         }
 
-        private void Number_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) // number
-        {
-            App.numberOfSignsString = Number.Text;
-        }
+        //private void Number_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) // number
+        //{
+        //    App.numberOfSignsString = Number.Text;
+        //}
 
         public void Button_Click(object sender, RoutedEventArgs e) // start
         {
             App.work = true;
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\crypto.jpg");
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images\crypto.jpg");
             try
             {
                 if (Convert.ToInt32(App.sec) < int.MaxValue && Convert.ToInt32(App.sec) > 0)
@@ -90,6 +97,11 @@ namespace Binance_bot_WPF
                 Background.Opacity = 0.8;
             }
         }
+
+        //private void Value_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        //{
+        //    App.j = Value.Text;
+        //}
     }
 }
 

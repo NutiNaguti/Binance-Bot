@@ -8,16 +8,19 @@ using System.Windows;
 
 namespace Binance_bot_WPF
 {
+   /*
+    *  Класс с основной логикой
+    */
     public partial class App : Application
     {
-        public static string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\Settings.txt");
+        public static string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Files\Settings.txt");
         public static string couple = ""; // торговая пара
         public static string API_KEY = ""; // API binance
         public static string SECRET_API_KEY = ""; // secret API binance
         public static string coinsString = "";
         public static string numberOfSignsString = "";
         public static string sec = "";
-        public static int numberOfSigns = 0; // количество знаков после запятой
+        //public static int numberOfSigns = 0; // количество знаков после запятой
         public static decimal coins = 0.0m; // количество монет, которое будет выставляться в ордерах
         public static decimal[][] array = new decimal[10][];
         public static bool work = false;
@@ -30,14 +33,14 @@ namespace Binance_bot_WPF
         {
             try
             {
-                Exeption.SettingsWrite(); // запись существующих настроек в текстовый файл
+                SettingsWrite.Settings(); // запись существующих настроек в текстовый файл
                 Autorization.AutorizationBinance(); // авторизация api 
                 BuySell.Cycle(); // цикл while 
             }
 
             catch
             {
-                Exeption.SettingsRead();
+                SettingsWrite.SettingsRead();
                 Core();
             }
         }
@@ -46,21 +49,20 @@ namespace Binance_bot_WPF
         {
             try
             {
-                Exeption.SettingsWrite(); // запись существующих настроек в текстовый файл
+                SettingsWrite.Settings(); // запись существующих настроек в текстовый файл
                 Autorization.AutorizationBinance(); // авторизация api 
                 BuySell.Cycle(Convert.ToInt32(sec)); // цикл while 
             }
 
             catch
             {
-                Exeption.SettingsRead();
+                SettingsWrite.SettingsRead();
                 Core_2();
             }
         }
 
         public static void Buy()
         {
-            numberOfSigns = Convert.ToInt32(numberOfSignsString);
             coins = Convert.ToDecimal(coinsString);
             int index = 0;
             decimal[] percent = new decimal[3];
@@ -111,7 +113,7 @@ namespace Binance_bot_WPF
                 Console.WriteLine($"цена нужного ордера: {price[index]}");
                 priceBuy = price[index];
                 priceForBuy = priceBuy - Fee(priceBuy);
-                priceForBuy = Math.Round(priceForBuy, numberOfSigns);
+                priceForBuy = Math.Round(priceForBuy, 7);
                 var orderBuy = client.PlaceOrder(couple, OrderSide.Buy, OrderType.Limit, coins, price: priceForBuy,
                     timeInForce: TimeInForce.GoodTillCancel);
             }
@@ -119,7 +121,6 @@ namespace Binance_bot_WPF
 
         public static void Sell()
         {
-            numberOfSigns = Convert.ToInt32(numberOfSignsString);
             coins = Convert.ToDecimal(coinsString);
             int index = 0, element;
             decimal[] price = new decimal[10];
@@ -169,7 +170,7 @@ namespace Binance_bot_WPF
                 Console.WriteLine($"цена нужного ордера: {price[index]}");
                 priceSell = price[index];
                 priceForSell = priceSell + Fee(priceSell);
-                priceForSell = Math.Round(priceForSell, numberOfSigns);
+                priceForSell = Math.Round(priceForSell, 7);
                 if (priceForSell > priceBuy)
                 {
                     var orderSell = client.PlaceOrder(couple, OrderSide.Sell, OrderType.Limit, coins,
