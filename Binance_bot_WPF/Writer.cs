@@ -9,7 +9,7 @@ namespace Binance_bot_WPF
     */
     class Writer
     {
-        public static string line = "";
+        public static string line { get; set; } = "";
 
         public static void Write()
         {

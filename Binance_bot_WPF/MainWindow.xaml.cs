@@ -13,7 +13,6 @@ namespace Binance_bot_WPF
     */
     public partial class MainWindow : Window
     {
-        public static string j = "";
         public MainWindow()
         {
             InitializeComponent();

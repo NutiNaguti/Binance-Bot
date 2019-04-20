@@ -8,7 +8,7 @@ namespace Binance_bot_WPF
     */
     class SettingsWrite
     {
-        private static object[] data = new object[6];
+        private static object[] data { get; set; } = new object[6];
 
         public static void Settings()
         {

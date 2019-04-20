@@ -13,20 +13,20 @@ namespace Binance_bot_WPF
     */
     public partial class App : Application
     {
-        public static string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Files\Settings.txt");
-        public static string couple = ""; // торговая пара
-        public static string API_KEY = ""; // API binance
-        public static string SECRET_API_KEY = ""; // secret API binance
-        public static string coinsString = "";
-        public static string sec = "";
-        public static int numberOfSigns = 0; // количество знаков после запятой
-        public static decimal coins = 0.0m; // количество монет, которое будет выставляться в ордерах
-        public static decimal[][] array = new decimal[10][];
-        public static bool work = false;
-        private static decimal priceForBuy = 0; // цена по которой выставится ордер на покупку
-        private static decimal priceForSell = 0; // цена по которой выставится ордер на продажу
-        private static decimal priceBuy = 0;
-        private static decimal priceSell = 0;
+        public static string settingsPath { get; set; } = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Files\Settings.txt");
+        public static string couple { get; set; } = ""; // торговая пара
+        public static string API_KEY { get; set; } = ""; // API binance
+        public static string SECRET_API_KEY { get; set; } = ""; // secret API binance
+        public static string coinsString { get; set; } = "";
+        public static string sec { get; set; } = "";
+        public static int numberOfSigns { get; set; } = 0; // количество знаков после запятой
+        public static decimal coins { get; set; } = 0.0m; // количество монет, которое будет выставляться в ордерах
+        public static decimal[][] array { get; set; } = new decimal[10][];
+        public static bool work { get; set; } = false;
+        private static decimal priceForBuy { get; set; } = 0; // цена по которой выставится ордер на покупку
+        private static decimal priceForSell { get; set; } = 0; // цена по которой выставится ордер на продажу
+        private static decimal priceBuy { get; set; } = 0;
+        private static decimal priceSell { get; set; } = 0;
 
         public static void Core()
         {
