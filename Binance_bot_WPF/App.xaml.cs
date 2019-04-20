@@ -18,9 +18,8 @@ namespace Binance_bot_WPF
         public static string API_KEY = ""; // API binance
         public static string SECRET_API_KEY = ""; // secret API binance
         public static string coinsString = "";
-        public static string numberOfSignsString = "";
         public static string sec = "";
-        //public static int numberOfSigns = 0; // количество знаков после запятой
+        public static int numberOfSigns = 0; // количество знаков после запятой
         public static decimal coins = 0.0m; // количество монет, которое будет выставляться в ордерах
         public static decimal[][] array = new decimal[10][];
         public static bool work = false;
@@ -113,7 +112,7 @@ namespace Binance_bot_WPF
                 Console.WriteLine($"цена нужного ордера: {price[index]}");
                 priceBuy = price[index];
                 priceForBuy = priceBuy - Fee(priceBuy);
-                priceForBuy = Math.Round(priceForBuy, 7);
+                priceForBuy = Math.Round(priceForBuy, numberOfSigns);
                 var orderBuy = client.PlaceOrder(couple, OrderSide.Buy, OrderType.Limit, coins, price: priceForBuy,
                     timeInForce: TimeInForce.GoodTillCancel);
             }
@@ -170,7 +169,7 @@ namespace Binance_bot_WPF
                 Console.WriteLine($"цена нужного ордера: {price[index]}");
                 priceSell = price[index];
                 priceForSell = priceSell + Fee(priceSell);
-                priceForSell = Math.Round(priceForSell, 7);
+                priceForSell = Math.Round(priceForSell, numberOfSigns);
                 if (priceForSell > priceBuy)
                 {
                     var orderSell = client.PlaceOrder(couple, OrderSide.Sell, OrderType.Limit, coins,

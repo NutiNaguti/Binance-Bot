@@ -50,6 +50,7 @@ namespace Binance_bot_WPF
         private void Couple_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) // couple
         {
             App.couple = Couple.Text;
+            Sample.Sort();
         }
 
         private void Coins_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) // coins
