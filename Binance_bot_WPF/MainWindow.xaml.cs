@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -16,6 +17,28 @@ namespace Binance_bot_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            if (!Directory.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files")))
+            {
+                Directory.CreateDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files"));
+                using (var file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files/API Key.txt")))
+                {
+                    file.Close();
+                }
+                using (var file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files/Secret API Key.txt")))
+                {
+                    file.Close();
+                }
+                using (var file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files/Settings.txt")))
+                {
+                    file.Close();
+                }
+                using (var file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files/Readme.txt")))
+                {
+                    file.Close();
+                }
+
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // Stop
@@ -97,7 +120,13 @@ namespace Binance_bot_WPF
                 Background.Opacity = 0.8;
             }
         }
-
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
         //private void Value_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         //{
         //    App.j = Value.Text;

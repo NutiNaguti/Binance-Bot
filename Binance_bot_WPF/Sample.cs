@@ -14,7 +14,7 @@ namespace Binance_bot_WPF
         public static void Sort()
         {
             if (App.couple.Contains("BNBUSDT") || App.couple.Contains("ADAUSDT") ||
-            App.couple.Contains("IOTAUSDT") || App.couple.Contains("ZRXUSDT") || 
+            App.couple.Contains("IOTAUSDT") || App.couple.Contains("ZRXUSDT") ||
             App.couple.Contains("BATUSDT") || App.couple.Contains("LINKUSDT"))
             {
                 App.numberOfSigns = 4;

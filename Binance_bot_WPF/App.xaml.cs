@@ -22,7 +22,7 @@ namespace Binance_bot_WPF
         public static int numberOfSigns { get; set; } = 0; // количество знаков после запятой
         public static decimal coins { get; set; } = 0.0m; // количество монет, которое будет выставляться в ордерах
         public static decimal[][] array { get; set; } = new decimal[10][];
-        public static bool work { get; set; } = false;
+        public static bool work { get; set; } = false; // флаг для остановки приложения
         private static decimal priceForBuy { get; set; } = 0; // цена по которой выставится ордер на покупку
         private static decimal priceForSell { get; set; } = 0; // цена по которой выставится ордер на продажу
         private static decimal priceBuy { get; set; } = 0;

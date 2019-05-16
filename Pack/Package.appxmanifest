@@ -7,13 +7,13 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="e00bbeae-5d0f-4a58-8fb2-2f472270f9b6"
-    Publisher="CN=NutiNaguti"
-    Version="1.0.1.0" />
+    Name="NutiNagutiCompany.CryptoBot"
+    Publisher="CN=User"
+    Version="1.0.2.0" />
 
   <Properties>
-    <DisplayName>Binance Crypto Bot</DisplayName>
-    <PublisherDisplayName>NutiNaguti</PublisherDisplayName>
+    <DisplayName>Pack</DisplayName>
+    <PublisherDisplayName>User</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 
@@ -36,7 +36,12 @@
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png"  Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png"/>
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png"  ShortName="Binance Crypto Bot" Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
