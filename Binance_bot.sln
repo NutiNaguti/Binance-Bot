@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binance_bot_WPF", "Binance_
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Pack", "Pack\Pack.wapproj", "{D2EA3598-941A-4F3F-8E02-DE4EB2B0F377}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotCore", "Binance_botCore\BotCore.csproj", "{91E98823-1B30-4657-BA46-6FAEB5640E9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,26 @@ Global
 		{D2EA3598-941A-4F3F-8E02-DE4EB2B0F377}.Release|x86.ActiveCfg = Release|x86
 		{D2EA3598-941A-4F3F-8E02-DE4EB2B0F377}.Release|x86.Build.0 = Release|x86
 		{D2EA3598-941A-4F3F-8E02-DE4EB2B0F377}.Release|x86.Deploy.0 = Release|x86
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|x64.Build.0 = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Debug|x86.Build.0 = Debug|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|ARM.Build.0 = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|ARM64.Build.0 = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|x64.ActiveCfg = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|x64.Build.0 = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|x86.ActiveCfg = Release|Any CPU
+		{91E98823-1B30-4657-BA46-6FAEB5640E9E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
