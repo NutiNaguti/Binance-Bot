@@ -44,6 +44,7 @@ namespace Binance_bot_WPF
         private void Button_Click_1(object sender, RoutedEventArgs e) // Stop
         {
             App.work = false;
+            Status.Content = "Stoped";
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images\котя.jpg");
             ImageBrush myBrush = new ImageBrush();
             myBrush.ImageSource = new BitmapImage(new Uri(path, UriKind.Absolute));
@@ -88,6 +89,7 @@ namespace Binance_bot_WPF
         public void Button_Click(object sender, RoutedEventArgs e) // start
         {
             App.work = true;
+            Status.Content = "Working";
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images\crypto.jpg");
             try
             {
@@ -127,6 +129,7 @@ namespace Binance_bot_WPF
                 DragMove();
             }
         }
+
         //private void Value_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         //{
         //    App.j = Value.Text;

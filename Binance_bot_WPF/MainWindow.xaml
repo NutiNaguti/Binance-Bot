@@ -10,10 +10,9 @@
         Background="Transparent" AllowsTransparency="True" 
         MouseDown="Window_MouseDown">
     <Grid>
-        <Grid Margin="4,3,-4,-2.4">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition>
-
                 </RowDefinition>
             </Grid.RowDefinitions>
 
@@ -27,7 +26,7 @@
             </Border>
 
             <StackPanel>
-                <Image Source="Images/Binance (1).png" Height="83" Margin="10,0"/>
+                <Image Source="Images/Binance (1).png" Height="83" Margin="10,10,10,0"/>
                 <TextBlock Text="Crypro Bot"
                            FontWeight="Light"
                            FontFamily="Helvetica"
@@ -52,14 +51,14 @@
                     HorizontalContentAlignment="Left"
                     Opacity="0.5" 
                     Height="25"
-                        Margin="37,170,0,0" TextChanged="Couple_TextChanged"/>
+                    Margin="37,170,0,0" 
+                    TextChanged="Couple_TextChanged"/>
                     <iconPacks:PackIconMaterial Kind="Pocket" 
                                             VerticalAlignment="Center" 
                                             HorizontalAlignment="Center"
                                             Foreground="White"
                                                 Margin="88,171,0,0" Height="17" Width="36"
                                                 Opacity="0.8"/>
-
                 </StackPanel>
                 <Border Width="300"
                     Height="2"
@@ -95,67 +94,25 @@
                         Margin="10,0"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <Button Width="100" Height="40" Content="Settings" Margin="30,140,0,0" Click="Button_Click4"/>
-                    <Button Width="100" Height="40" Content="Start" Margin="-100,36,0,0" Click="Button_Click"/>
-                    <Button Width="100" Height="40" Content="Stop" Margin="115,36,0,0" Click="Button_Click_1"/>
-                    <Button Width="100" Height="40" Content="Exit" Margin="-100,140,0,0" Click="Button_Click_3"/>
+                    <Button Width="100" Height="40" Content="Settings" 
+                            Margin="20,50,0,0" Click="Button_Click4" 
+                            Foreground="White" Opacity="0.8"/>
+                    <Button Width="100" Height="40" Content="Start" 
+                            Margin="20,50,0,0" Click="Button_Click"
+                            Foreground="White" Opacity="0.8"/>
+                    <Button Width="100" Height="40" Content="Stop" 
+                            Margin="20,50,0,0" Click="Button_Click_1"
+                            Foreground="White" Opacity="0.8"/>
+                    
                 </StackPanel>
+                <Label x:Name="Status" Content="Ready"
+                           Foreground="White"
+                           Margin="161,23,0,0"
+                       FontSize="20"/>
+                <Button Width="100" Height="40" Content="Exit" 
+                        Margin="250,8,0,0" Click="Button_Click_3"
+                        Foreground="White" Opacity="0.8"/>
             </StackPanel>
         </Grid>
     </Grid>
-    <!--<Window.Background>
-        <SolidColorBrush Color="#FF000A29"/>
-        -->
-    <!--<ImageBrush ImageSource="/Binance_bot_WPF;component/Images/bitcoin-Logo-Wallpaper-1600x1011.png" Stretch="UniformToFill" TileMode="None" Opacity="0.8"/>-->
-    <!--
-    </Window.Background>-->
-    <!--<Grid Margin="0,0,3.4,-19" Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="343*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="66*"/>
-        </Grid.RowDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Введите торговую пару" x:Name="Couple" TextChanged="Couple_TextChanged" Text="Торговая пара">
-            <TextBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.6"/>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,318,0,0" TextWrapping="Wrap" Text="Монеты" VerticalAlignment="Top" Width="120" ToolTip="Введите количество монет для торговли" x:Name="Coins" TextChanged="Coins_TextChanged" Grid.RowSpan="2">
-            <TextBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.6"/>
-            </TextBox.Background>
-        </TextBox>
-        <Label Content="CryptoBot" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="285,256,28.8,0" Height="26" Width="63" Foreground="#FF4EB8CE"/>
-        <Label Content="NutiNaguti, 2019" HorizontalAlignment="Center" Width="105" Margin="178,8.8,93.8,0" Height="26" VerticalAlignment="Top" Grid.Row="3" Foreground="#FF4EC3C7"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="274,0.8,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19" Grid.Row="1">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="274,10.2,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="19" Grid.Row="2">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="37,10.2,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3" Height="19" Grid.Row="2">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Help" HorizontalAlignment="Left" Margin="144,6.8,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" RenderTransformOrigin="-3.181,-12.875" Height="19" Grid.Row="1">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Settings" HorizontalAlignment="Left" Margin="37,0.8,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click4" Height="19" RenderTransformOrigin="0.472,1.979" Grid.Row="1">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.6"/>
-            </Button.Background>
-        </Button>-->
-    <!--</Grid>-->
 </Window>
