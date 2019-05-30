@@ -12,24 +12,20 @@
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="115*">
+                <RowDefinition>
                 </RowDefinition>
-                <RowDefinition Height="102*"/>
             </Grid.RowDefinitions>
 
-            <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,0,0,-15.96">
+            <Border CornerRadius="10" Grid.RowSpan="2">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#FF8D74DD" Offset="0.0"/>
                         <GradientStop Color="#FFAB4848" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Button Content="Exit" 
-                        Margin="270,400,10,10" Click="Button_Click_3"
-                        Foreground="White" Opacity="0.8"/>
             </Border>
 
-            <StackPanel Margin="0,0,0,0.04" Grid.RowSpan="2">
+            <StackPanel>
                 <Image Source="Images/Binance (1).png" Height="83" Margin="10,10,10,0"/>
                 <TextBlock Text="Crypro Bot"
                            FontWeight="Light"
@@ -41,7 +37,7 @@
                            Width="100"/>
             </StackPanel>
 
-            <StackPanel Margin="0,0,0,0.04" Grid.RowSpan="2">
+            <StackPanel Grid.Row="1">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="Couple"
                     Text="Торговая пара:"
@@ -113,6 +109,9 @@
                            Foreground="White"
                            Margin="161,23,0,0"
                        FontSize="20"/>
+                <Button Width="100" Height="40" Content="Exit" 
+                        Margin="250,8,0,0" Click="Button_Click_3"
+                        Foreground="White" Opacity="0.8"/>
             </StackPanel>
         </Grid>
     </Grid>
